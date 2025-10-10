@@ -2,11 +2,11 @@
 #include <Wire.h>
 #include <stdlib.h>
 
-constexpr uint8_t kI2CAddress = 0x23;            // 7-bit I2C address for this dummy sensor
+constexpr uint8_t kI2CAddress = 0x20;            // 7-bit I2C address for this dummy sensor
 constexpr int kSdaPin = 21;                      // default ESP32 devkit SDA pin
 constexpr int kSclPin = 22;                      // default ESP32 devkit SCL pin
 constexpr unsigned long kIntervalMs = 15000UL;   // 15 seconds between value updates
-constexpr float kFloatValues[] = {1.6500f, 1.7500f, 1.8500f};
+constexpr float kFloatValues[] = {1.6000f, 1.9000f};
 constexpr size_t kFloatValueCount = sizeof(kFloatValues) / sizeof(kFloatValues[0]);
 
 volatile float gCurrentValue = kFloatValues[0];
